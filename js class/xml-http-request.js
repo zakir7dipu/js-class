@@ -1,16 +1,16 @@
 console.clear();
 
 // let container = document.querySelector('tbody');
-// Array.from(JSON.parse(data)).map(item => {
-//     let row = document.createElement('tr');
-//     let titleColumn = document.createElement('td');
-//     titleColumn.innerText = item.title;
-//     let bodyColumn = document.createElement('td');
-//     bodyColumn.innerText = item.body;
-//     row.appendChild(titleColumn);
-//     row.appendChild(bodyColumn);
-//     container.appendChild(row);
-// })
+Array.from(JSON.parse(data)).map(item => {
+    let row = document.createElement('tr');
+    let titleColumn = document.createElement('td');
+    titleColumn.innerText = item.title;
+    let bodyColumn = document.createElement('td');
+    bodyColumn.innerText = item.body;
+    row.appendChild(titleColumn);
+    row.appendChild(bodyColumn);
+    container.appendChild(row);
+})
 
 
 
