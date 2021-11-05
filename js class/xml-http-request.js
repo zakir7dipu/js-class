@@ -1,7 +1,7 @@
 console.clear();
 
 // let container = document.querySelector('tbody');
-// Array.from(data).map(item => {
+// Array.from(JSON.parse(data)).map(item => {
 //     let row = document.createElement('tr');
 //     let titleColumn = document.createElement('td');
 //     titleColumn.innerText = item.title;
@@ -15,25 +15,35 @@ console.clear();
 
 
 const makeRequest = (method, url, data) => {
-    let xml = new XMLHttpRequest();
-    xml.open(method,url);
-    xml.setRequestHeader('Content-type', 'application/json');
-    xml.onload = () => {
-        let data = xml.response;
-        console.log(JSON.parse(data));
-    }
+    return new Promise((resolve, reject)=>{
+        let xml = new XMLHttpRequest();
+        xml.open(method,url);
+        xml.setRequestHeader('Content-type', 'application/json');
+        xml.onload = () => {
+            let data = xml.response;
+            console.log(data);
+            // resolve(JSON.parse(data))
+        }
 
-    xml.onerror = () => {
-        console.log('We don\'t get any data')
-    }
+        xml.onerror = () => {
+            reject('We don\'t get any data')
+        }
 
-    xml.send(JSON.stringify(data));
+        xml.send(JSON.stringify(data));
+    })
+
 }
 
 const getdata = () => {
-    makeRequest('get', 'https://jsonplaceholder.typicode.com/posts/1');
+    makeRequest('get', 'https://jsonplaceholder.typicode.com/posts/100')
+        .then((res) => {
+            console.log(res)
+        })
+        .catch((err) => {
+            console.log(err)
+        });
 }
-// getdata();
+getdata();
 
 const postdata = () => {
     makeRequest('post', 'https://jsonplaceholder.typicode.com/posts',{
