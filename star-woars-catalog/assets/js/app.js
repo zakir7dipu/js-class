@@ -1,3 +1,4 @@
+localStorage.clear();
 let listView = document.querySelector('.list_view');
 let btnPriv = document.querySelector('.btn_priv');
 let btnNext = document.querySelector('.btn_next');
@@ -45,7 +46,24 @@ const changePage =  (page) => {
 changePage(currentPage);
 
 const showDetails = (data) => {
-    console.log(data)
+    let container = document.querySelector('.detail-list');
+    let name = document.querySelector('#name')
+    let height = document.querySelector('#height')
+    let mass = document.querySelector('#mass')
+    let haircolor = document.querySelector('#haircolor')
+    let skincolor = document.querySelector('#skincolor')
+    let eyecolor = document.querySelector('#eyecolor')
+    let birth_year = document.querySelector('#birth_year')
+    let gender = document.querySelector('#gender')
+    name.innerHTML = data.name;
+    height.innerHTML = `Height: ${data.height}`;
+    mass.innerHTML = `Mass: ${data.mass}`;
+    haircolor.innerHTML = `Haircolor: ${data.hair_color}`;
+    skincolor.innerHTML = `Skincolor: ${data.skin_color}`;
+    eyecolor.innerHTML = `Eyecolor: ${data.eye_color}`;
+    birth_year.innerHTML = `Birth_year: ${data.birth_year}`;
+    gender.innerHTML = `Gender: ${data.gender}`;
+    // console.log(data)
 }
 
 const details = () => {
@@ -62,9 +80,8 @@ const details = () => {
                 }
             }
             btn.classList.add('active')
-            let detailsData = btn.getAttributeNode('datasrc');
-            console.log(JSON.parse(detailsData))
-            // showDetails(JSON.parse())
+            let detailsData = localStorage.getItem(btn.innerText);
+            showDetails(JSON.parse(detailsData))
         });
     }
 }
@@ -74,9 +91,9 @@ const show = (data) => {
     Array.from(data).map(item => {
         let li = document.createElement('li');
         li.classList.add('list_item');
-        li.setAttribute('datasrc',JSON.stringify(item));
         li.innerText = item.name;
         listView.appendChild(li);
+        localStorage.setItem(item.name, JSON.stringify(item));
     });
     details();
 }
