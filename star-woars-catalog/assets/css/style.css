@@ -96,7 +96,7 @@ header h1 {
     transition: 0.5s;
 }
 .card .card-footer{
-    height: 200px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
