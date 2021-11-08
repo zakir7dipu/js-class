@@ -141,6 +141,12 @@ header h1 {
     display: block;
     font-weight: 600;
 }
+.d-none{
+    display: none;
+}
+.loding-image, .loding-image2{
+    width: 100%;
+}
 /*.detail-list li{*/
 /*    */
 /*}*/
