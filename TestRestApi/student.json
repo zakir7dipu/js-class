@@ -1,0 +1,65 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Kamal",
+      "roll": "1",
+      "phone": "12345"
+    },
+    {
+      "id": "2",
+      "name": "Arjun",
+      "roll": "2",
+      "phone": "123456"
+    },
+    {
+      "id": "3",
+      "name": "Sifat",
+      "roll": "3",
+      "phone": "123457"
+    },
+    {
+      "id": "4",
+      "name": "Jamal",
+      "roll": "2",
+      "phone": "12345634"
+    },
+    {
+      "id": "5",
+      "name": "Akmal",
+      "roll": "5",
+      "phone": "12345342"
+    },
+    {
+      "id": "6",
+      "name": "Rifat",
+      "roll": "6",
+      "phone": "12345444"
+    },
+    {
+      "id": "7",
+      "name": "Imran",
+      "roll": "7",
+      "phone": "12345"
+    },
+    {
+      "id":"8",
+      "name":"Zakir",
+      "roll":"1",
+      "phone":"0722987223"
+    },
+    {
+      "id":"9",
+      "name":"Mohona",
+      "roll":"2",
+      "phone":"07229823223"
+    },
+    {
+      "id":"10",
+      "name":"Aveen",
+      "roll":"3",
+      "phone":"0722987223"
+    }
+  ]
+}
+
