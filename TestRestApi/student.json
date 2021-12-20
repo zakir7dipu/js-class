@@ -32,15 +32,15 @@
     },
     {
       "id": "6",
-      "name": "Rifat",
+      "name": "Rofiq",
       "roll": "6",
-      "phone": "12345444"
+      "phone": "1234567890"
     },
     {
       "id": "7",
-      "name": "Imran",
-      "roll": "7",
-      "phone": "12345"
+      "name": "Jamran",
+      "roll": "17",
+      "phone": "1234567890"
     },
     {
       "id": "8",
@@ -59,12 +59,6 @@
       "name": "Aveen",
       "roll": "3",
       "phone": "0722987223"
-    },
-    {
-      "id": "50e6f118-22cf-47f5-94a8-ec1b80240a43",
-      "name": "Kuddus",
-      "roll": "11",
-      "phone": "0182345678"
     },
     {
       "id": "ae543706-03d1-40b8-93b2-75fa63a9d870",
